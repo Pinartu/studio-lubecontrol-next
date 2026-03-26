@@ -41,5 +41,12 @@ export default defineType({
       to: [{type: 'productCategory'}],
       description: 'Select a parent category if this is a subcategory.',
     }),
+    defineField({
+      name: 'routePath',
+      title: 'Site URL path',
+      type: 'string',
+      description:
+        'Full path for this category on the site (e.g. /fluid-handling/oil-handling-equipment/oil-guns-and-oil-jug). Used to match category pages.',
+    }),
   ],
 })
