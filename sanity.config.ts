@@ -8,6 +8,7 @@ const singletonIds: Record<string, string> = {
   homePage: 'homePage',
   mainNavigation: 'mainNavigation',
   cataloguePage: 'cataloguePage',
+  resourcesPage: 'resourcesPage',
   contactPage: 'contactPage',
   footerContent: 'footerContent',
 }
@@ -55,6 +56,11 @@ export default defineConfig({
                         S.document().schemaType('cataloguePage').documentId(singletonIds.cataloguePage),
                       ),
                     S.listItem()
+                      .title('Resources page')
+                      .child(
+                        S.document().schemaType('resourcesPage').documentId(singletonIds.resourcesPage),
+                      ),
+                    S.listItem()
                       .title('Contact page')
                       .child(
                         S.document().schemaType('contactPage').documentId(singletonIds.contactPage),
@@ -83,6 +89,10 @@ export default defineConfig({
             S.listItem()
               .title('Pages')
               .child(S.documentTypeList('page').title('Pages')),
+            S.divider(),
+            S.listItem()
+              .title('PDF Documents')
+              .child(S.documentTypeList('pdfDocument').title('PDF Documents')),
           ]),
     }),
     visionTool(),

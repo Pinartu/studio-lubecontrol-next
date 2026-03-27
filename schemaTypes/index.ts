@@ -8,6 +8,8 @@ import categoryPage from './categoryPage'
 import cataloguePage from './cataloguePage'
 import contactPage from './contactPage'
 import footerContent from './footerContent'
+import pdfDocument from './pdfDocument'
+import resourcesPage from './resourcesPage'
 import {navColumn} from './objects/navColumn'
 import {navLinkNested, navSubGroup} from './objects/navLink'
 
@@ -25,4 +27,6 @@ export const schemaTypes = [
   page,
   productCategory,
   product,
+  pdfDocument,
+  resourcesPage,
 ]
