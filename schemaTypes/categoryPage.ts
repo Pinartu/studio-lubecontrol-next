@@ -51,7 +51,8 @@ export default defineType({
       type: 'array',
       group: 'content',
       of: [{type: 'block'}, {type: 'image', options: {hotspot: true}}],
-      description: 'The description/introduction section shown below the page title.',
+      description:
+        'The description/introduction section shown below the page title. On parent category pages, this text also feeds the subcategory card blurb when the Product Category “Description” field is empty.',
     }),
     defineField({
       name: 'productCategory',
@@ -139,6 +140,13 @@ export default defineType({
               title: 'PDF Name',
               type: 'string',
               validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: 'description',
+              title: 'Short Description',
+              type: 'text',
+              rows: 2,
+              description: 'Optional. Shown under the title on download cards (same idea as Catalogue Library).',
             }),
             defineField({
               name: 'file',
